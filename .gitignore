@@ -1,0 +1,12 @@
+bison.c
+bison.o
+lex.c
+lex.o
+lex.yy.c
+main.o
+parser.output
+parser.tab.c
+parser.tab.h
+smalljava
+tok.h
+
