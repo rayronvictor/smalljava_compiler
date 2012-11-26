@@ -1,0 +1,34 @@
+if(a==b){
+	a=a+2*b;
+}else{
+	int a = 2+4;
+	a=a+a;
+	if(a==b){
+		b=a+2;
+	}
+	switch(a+b){
+		case 1:
+			a=a+b;
+			if(a==b){
+				a=b+a;
+			}else{
+				a=a+1;
+			}
+			a=a+b;
+			break;
+		case 2:
+			a=a+b;
+			exit when(a==b+3);
+		default:
+			a=a+b;
+			if(a==b && c<d){
+				a=a+c;
+			}else{
+				if(a==c+a){
+					a=c;
+				}
+			}
+			a=c;
+	}
+}
+a=b+b;
