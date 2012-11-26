@@ -1,0 +1,14 @@
+#Requisitos
+Para compilar e executar os arquivos tenha instalado os seguintes programas:
+- Compilador C/C++
+- Flex
+- Bison
+
+Coloque-os no *PATH* do sistema.
+
+# Como compilar o compilador e o código fonte
+Execute o comando `make` para compilar os arquivos. O comando `make clean` remove os arquivos gerados pela compilação.
+Para compilar o código fonte do arquivo *source.smj* execute o comando `./smalljava source.smj`
+
+# Erros possíveis
+Pode ocorrer do valor de retorno `return exit(1)` não funcionar em alguns SO`s. Para resolver o problema tente substituir o retorno por `return 1`
