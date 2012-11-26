@@ -13,6 +13,7 @@ extern char *yytext;	// defined and maintained in lex.c
 
 %start	l 
 
+%token 	<str> IDCLASS
 %token 	<str> ID
 %token 	<str> MAIS
 %token 	<str> MENOS
@@ -108,7 +109,7 @@ seq:				BREAK PNTEVIRG
 					| EXIT WHEN LPAREN exp RPAREN PNTEVIRG
 					;
 					
-tipo:				id
+tipo:				IDCLASS
 					| INT
 					| BOOL
 					| FLOAT

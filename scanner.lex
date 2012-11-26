@@ -10,6 +10,7 @@ comment						\\\*(.)*\*\\
 letter						[A-Za-z]
 digit						[0-9]
 id							{letter}({letter}|{digit})*
+idClass						[A-Z]({letter}|{digit})*
 number						{digit}+(\.{digit}+)?
 
 %%
@@ -72,6 +73,7 @@ break						{yylval.str = new std::string(yytext); return (BREAK);}
 exit						{yylval.str = new std::string(yytext); return (EXIT);}
 when						{yylval.str = new std::string(yytext); return (WHEN);}
 
+{idClass}					{yylval.str = new std::string(yytext); return (IDCLASS);}
 {id}						{yylval.str = new std::string(yytext); return (ID);}
 {number}					{yylval.val = atoi(yytext); return (NUM);}
 
