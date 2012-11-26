@@ -43,6 +43,7 @@ number						{digit}+(\.{digit}+)?
 "}"							{yylval.str = new std::string(yytext); return (RCOLCH);}
 
 ","							{yylval.str = new std::string(yytext); return (VIRG);}
+"."							{yylval.str = new std::string(yytext); return (PNT);}
 ";"							{yylval.str = new std::string(yytext); return (PNTEVIRG);}
 ":"							{yylval.str = new std::string(yytext); return (DOISPNT);}
 "="							{yylval.str = new std::string(yytext); return (ATRIB);}
@@ -72,6 +73,10 @@ default						{yylval.str = new std::string(yytext); return (DEFAULT);}
 break						{yylval.str = new std::string(yytext); return (BREAK);}
 exit						{yylval.str = new std::string(yytext); return (EXIT);}
 when						{yylval.str = new std::string(yytext); return (WHEN);}
+size						{yylval.str = new std::string(yytext); return (SIZE);}
+
+new							{yylval.str = new std::string(yytext); return (NEW);}
+this						{yylval.str = new std::string(yytext); return (THIS);}
 
 {idClass}					{yylval.str = new std::string(yytext); return (IDCLASS);}
 {id}						{yylval.str = new std::string(yytext); return (ID);}

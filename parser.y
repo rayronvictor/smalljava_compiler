@@ -53,6 +53,7 @@ extern char *yytext;	// defined and maintained in lex.c
 %token <str> LCOLCH
 %token <str> RCOLCH
 
+%token <str> PNT
 %token <str> VIRG
 %token <str> PNTEVIRG
 %token <str> DOISPNT
@@ -68,6 +69,10 @@ extern char *yytext;	// defined and maintained in lex.c
 %token <str> BREAK
 %token <str> EXIT
 %token <str> WHEN
+%token <str> SIZE
+
+%token <str> NEW
+%token <str> THIS
 
 %type	<str> l
 %type	<str> stmt
@@ -118,7 +123,7 @@ tipo:				IDCLASS
 					| tipo LCHAVE NUM RCHAVE
 					| tipo LCHAVE NUM VIRG NUM RCHAVE
 					;
-
+					
 exp:				t
 					| NEGLOG f
 					| exp MAIS t			
@@ -129,6 +134,10 @@ exp:				t
 					| exp MAIOR t
 					| exp MENORIGUAL t
 					| exp MAIORIGUAL t
+					| id LCHAVE exp RCHAVE
+					| id PNT SIZE
+					| THIS
+					| NEW IDCLASS LPAREN RPAREN
 					;
 					
 t:					f
